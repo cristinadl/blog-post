@@ -190,9 +190,9 @@ app.put('/blog-posts/:id*?', jsonParser, (req, res) =>{
 	}
 
 	if(fields < 0){
-		res.status(406).json({
+		res.status(404).json({
 			message: `Missing least one field in body`,
-			status: 406
+			status: 404
 		}).send("Finish");
 	}
 
